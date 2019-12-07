@@ -17,49 +17,106 @@
         Black:               #000   
 ============================================ */
 
-/****************************************************************
+/**************************************************************************
                             GENERAL
-****************************************************************/
-
-html,body{
-    width:100%;
+**************************************************************************/
+html,body
+{
+    width: 100%;
     height: 100%;
 }
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway',sans-serif;
+}
+p{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+a,a:focus,a:hover{
+    text-decoration: none;
+}
+section{
+    background: #fff;
+}
+/**************************************************************************
+                            BUTTONS
+**************************************************************************/
+.btn-general{
+    font-family: 'Raleway',sans-serif;
+    border-radius: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 6px;
+    padding: 12px 46px;
+    transition: all .5s;
+}
+.btn-green{
+    color: #fff;
+    background-color: #5c9320;
+}
+.btn-white{
+    color: #212226;
+    background-color: #fff;
+}
 
-/****************************************************************
+.btn-green:hover,
+.btn-green:focus,
+.btn-white:hover,
+.btn-white:focus{
+    color: #fff;
+    background-color: #212226;
+}
+.btn-gradient{
+    color: #fff;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right,#5c9320 0%, #63c600 51%, #5c9320 100%);
+}
+
+.btn-gradient:hover,
+.btn-gradient:focus{
+    color: #fff;
+    background-position: right;
+}
+
+
+/**************************************************************************
                             LOADER
-****************************************************************/
+**************************************************************************/
+
 .loader{
-    /* Make FullScreen*/
     width: 100%;
-    height:100%;
+    height: 100%;
     position: fixed;
-    top:0;
-    right: 0;
+    top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
+    
     background: #5c9320;
     background: linear-gradient(to right,#5c9320 2%,#63c600 82%);
-    z-index: 9999;/**/
+    z-index: 9999;
 }
 
 .loader-inner{
-    position:absolute;
-    top:50%;
-    left:50%;
-/*
-    margin-top:-60px;
-    margin-left:-60px;
-*/
-    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*
+    margin-top: -60px;
+    margin-left: -60px;
+    */
+    transform: translate(-50%, -50%);
 }
+
 .loader span{
     width: 12px;
     height: 12px;
     background: #FFF;
-    border-radius:100%;
-    display: block;/**/
-    position: absolute;/**/
+    border-radius: 100%;
+    display: block;
+    position: absolute;
     opacity: 0;
     animation: load 5s ease-in-out infinite;
 }
@@ -71,97 +128,112 @@ html,body{
 
 .loader span.block-1{
     animation-delay: 1.06s;
-    left:0px;
-    top:0px;
+    left: 0px;
+    top: 0px;
 }
+
 .loader span.block-2{
-    animation-delay: 0.97s;
-    left:16px;
-    top:0px;
+    animation-delay: .97s;
+    left: 16px;
+    top: 0px;
 }
+
 .loader span.block-3{
-    animation-delay: 0.88s;
-    left:32px;
-    top:0px;
+    animation-delay: .88s;
+    left: 32px;
+    top: 0px;
 }
+
 .loader span.block-4{
-    animation-delay: 0.79s;
-    left:48px;
-    top:0px;
+    animation-delay: .79s;
+    left: 48px;
+    top: 0px;
 }
+
 .loader span.block-5{
-    animation-delay: 0.70s;
-    left:0px;
-    top:16px;
+    animation-delay: .70s;
+    left: 0px;
+    top: 16px;
 }
+
 .loader span.block-6{
-    animation-delay: 0.61s;
-    left:16px;
-    top:16px;
+    animation-delay: .61s;
+    left: 16px;
+    top: 16px;
 }
+
 .loader span.block-7{
-    animation-delay: 0.52s;
-    left:32px;
-    top:16px;
+    animation-delay: .52s;
+    left: 32px;
+    top: 16px;
 }
+
 .loader span.block-8{
-    animation-delay: 0.43s;
-    left:48px;
-    top:16px;
+    animation-delay: .43s;
+    left: 48px;
+    top: 16px;
 }
+
 .loader span.block-9{
-    animation-delay: 0.34s;
-    left:0px;
-    top:32px;
+    animation-delay: .34s;
+    left: 0px;
+    top: 32px;
 }
+
 .loader span.block-10{
-    animation-delay: 0.25s;
-    left:16px;
-    top:32px;
+    animation-delay: .25s;
+    left: 16px;
+    top: 32px;
 }
+
 .loader span.block-11{
-    animation-delay: 0.16s;
-    left:32px;
-    top:32px;
+    animation-delay: .16s;
+    left: 32px;
+    top: 32px;
 }
+
 .loader span.block-12{
-    animation-delay: 0.07s;
-    left:48px;
-    top:32px;
+    animation-delay: .07s;
+    left: 48px;
+    top: 32px;
 }
+
 .loader span.block-13{
     animation-delay: -0.02s;
-    left:0px;
-    top:48px;
+    left: 0px;
+    top: 48px;
 }
+
 .loader span.block-14{
     animation-delay: -0.11s;
-    left:16px;
-    top:48px;
+    left: 16px;
+    top: 48px;
 }
+
 .loader span.block-15{
-    animation-delay: -0.2s;
-    left:32px;
-    top:48px;
+    animation-delay: -0.20s;
+    left: 32px;
+    top: 48px;
 }
+
 .loader span.block-16{
     animation-delay: -0.29s;
-    left:48px;
-    top:48px;
+    left: 48px;
+    top: 48px;
 }
 
 @keyframes load{
     0%{
         opacity: 0;
-        transform: translateY(-95px);
+        transform: translate(-95px,60px);
     }
     15%{
         opacity: 0;
-        transform: translateY(-95px);
+        transform: translateX(-95px,60px);
     }
     30%{
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
     70%{
         opacity: 1;
@@ -169,14 +241,167 @@ html,body{
     }
     85%{
         opacity: 0;
-        transform: translateY(95px);
+        transform: translate(95px,60px);
     }
     100%{
         opacity: 0;
-        transform: translateY(95px);
+        transform: translateY(95px,60px);
     }
 }
+/**************************************************************************
+                                HELPER CLASSES
+**************************************************************************/
 
+/**************************************************************************
+                                CONTENT BOXES
+**************************************************************************/
 
+.content-box-lg{
+    padding: 120px 0;
+}
 
+.content-box-md{
+    padding: 100px 0;
+}
+.content-box-sm{
+    padding: 90px 0;
+}
+
+/**************************************************************************
+                                GENERAL HEADINGS
+**************************************************************************/
+.vertical-heading h5,
+.horizontal-heading h5{
+    color: #5c9320;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    word-spacing: 9px;
+}
+
+.vertical-heading h5{
+    
+    display: inline-block;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 60px;
+    left: -55px;
+}
+
+.vertical-heading h2,
+.horizontal-heading h2{
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 45px;
+}
+
+.vertical-heading h2{
+    margin: 0 0 0 35px;
+}
+
+.highlight-heading{
+    color: #5c9320;
+    font-weight: 700;
+}
+
+.horizontal-heading{
+    text-align: center;
+    
+}
+
+.horizontal-heading h2{
+    margin: 0;
+}
+
+.horizontal-heading h5{
+    margin-bottom: 5px;
+}
+
+/**************************************************************************
+                                ABOUT
+**************************************************************************/
+
+#about-bottom img{
+    margin: 0 auto;
+}
+
+/**************************************************************************
+                                HOME
+**************************************************************************/
+#home{
+    height: 100vh;
+    background: none;
+}
+
+#home-bg-video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    /*alternative fallback*/
+/*    background: url("../video/video.jpg") no-repeat cover;*/
+}
+
+#home-overlay{
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/*in display:table we can adjust vertical alignment
+    but display:block we cant.
+*/
+
+#home-content{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-inner{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#home-heading{
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 100;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.colored-text{
+    color: #5c9320;
+    font-weight: 500;
+}
+
+#home-text{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 100;
+    margin: 10px 0 30px 0;
+}
+
+#arrow-down{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    color: #fff;
+    font-size: 32px;
+    z-index: 1;
+    margin-left: -16px;
+}
+
+#arrow-down:hover,
+#arrow-down:focus{
+    color: #5c9320;
+}
 
